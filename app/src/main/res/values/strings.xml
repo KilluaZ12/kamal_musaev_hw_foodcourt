@@ -1,0 +1,14 @@
+<resources>
+    <string name="app_name">kamal_musaev_hw_foodcourt</string>
+    <string name="find">Find store by name</string>
+    <string name="delivery">Delivery</string>
+    <string name="pickup">Pickup</string>
+    <string name="catering">Catering</string>
+    <string name="curbside">Curbside</string>
+    <string name="title">title</string>
+    <string name="takeaways">Takeaways</string>
+    <string name="grocery">Grocery</string>
+    <string name="convenience">Convenience</string>
+    <string name="pharmacy">Pharmacy</string>
+    <string name="stores_open">stores open</string>
+</resources>
