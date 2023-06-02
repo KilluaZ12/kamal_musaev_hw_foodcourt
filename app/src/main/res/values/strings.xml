@@ -10,5 +10,16 @@
     <string name="grocery">Grocery</string>
     <string name="convenience">Convenience</string>
     <string name="pharmacy">Pharmacy</string>
+    <string name="open">OPEN</string>
+    <string name="place">American</string>
+    <string name="burger">Burgers</string>
+    <string name="free">FREE</string>
+    <string name="price">$10</string>
+    <string name="distance"> km away</string>
+    <string name="minimum">Minimum: </string>
+    <string name="delivery_second">Delivery: </string>
+    <string name="participants">(601)</string>
+    <string name="discount">Spend 25$, save $5</string>
     <string name="stores_open">stores open</string>
+    <string name="burger_craze">Burger Craze</string>
 </resources>
