@@ -11,16 +11,20 @@ import com.example.kamal_musaev_hw_foodcourt.R
 import com.example.kamal_musaev_hw_foodcourt.databinding.ItemButtonBinding
 
 
-class ButtonAdapter (
+class ButtonAdapter(
     private val context: Context,
     private val buttonList: ArrayList<Button>,
-    var onClick: (Button) -> Unit) : RecyclerView.Adapter<ButtonAdapter.ButtonViewHolder>(){
+    var onClick: (Button) -> Unit
+) : RecyclerView.Adapter<ButtonAdapter.ButtonViewHolder>() {
 
     private var selectedPosition = RecyclerView.NO_POSITION
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ButtonViewHolder {
-        return ButtonViewHolder(ItemButtonBinding.inflate(
-            LayoutInflater.from(parent.context), parent, false))
+        return ButtonViewHolder(
+            ItemButtonBinding.inflate(
+                LayoutInflater.from(parent.context), parent, false
+            )
+        )
     }
 
     override fun onBindViewHolder(holder: ButtonViewHolder, position: Int) {
@@ -33,7 +37,8 @@ class ButtonAdapter (
                 setBackgroundColor(selectedColor)
                 setTextColor(ContextCompat.getColor(context, R.color.white_100))
             }
-            holder.itemView.backgroundTintList = ContextCompat.getColorStateList(context, R.color.yellow)
+            holder.itemView.backgroundTintList =
+                ContextCompat.getColorStateList(context, R.color.yellow)
 
 
         } else {
@@ -42,7 +47,8 @@ class ButtonAdapter (
                 setBackgroundColor(defaultColor)
                 setTextColor(ContextCompat.getColor(context, R.color.green))
             }
-            holder.itemView.backgroundTintList = ContextCompat.getColorStateList(context, R.color.white_100)
+            holder.itemView.backgroundTintList =
+                ContextCompat.getColorStateList(context, R.color.white_100)
         }
 
         holder.itemView.setOnClickListener {
@@ -65,12 +71,12 @@ class ButtonAdapter (
         return buttonList.size
     }
 
-    inner class ButtonViewHolder(val binding: ItemButtonBinding)
-        : RecyclerView.ViewHolder(binding.root) {
+    inner class ButtonViewHolder(val binding: ItemButtonBinding) :
+        RecyclerView.ViewHolder(binding.root) {
 
-            fun onBind(button: Button) {
-                binding.textForButton.setText(button.text)
-                binding.iconDelivery.isVisible= button.hasIcon
-            }
+        fun onBind(button: Button) {
+            binding.textForButton.setText(button.text)
+            binding.iconDelivery.isVisible = button.hasIcon
+        }
     }
 }
